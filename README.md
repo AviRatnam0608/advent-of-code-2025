@@ -1,6 +1,8 @@
 # My Attempt at Advent of Code 2025
 
-#### Day 1 -> Solved Dec 2nd 12:05 AM EST
+#### Day 1 -> 
+Part 1: Solved Dec 2nd 12:05 AM EST
+Part 2: Solved Dec 2nd 1:35 AM EST
 
 #### Day 2 ->
 
