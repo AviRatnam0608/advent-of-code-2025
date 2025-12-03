@@ -1,4 +1,6 @@
 # My Attempt at Advent of Code 2025
+
+[Link to the challenge](https://adventofcode.com/2025) <br/><br/>
 Some of the solutions are quite brute force-y and not the most efficient. <br>
 I do these pretty late at night after a pretty long 9-5 at work so naturally this is more for fun. <br>
 These solutions are more along the principles this one Reddit comment said: <br><br/>
