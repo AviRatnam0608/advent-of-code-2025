@@ -1,4 +1,4 @@
-# My Attempt at Advent of Code 2025
+# Advent of Code 2025
 
 [Link to the challenge](https://adventofcode.com/2025) <br/><br/>
 Some of the solutions are quite brute force-y and not the most efficient. <br>
