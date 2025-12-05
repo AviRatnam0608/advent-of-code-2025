@@ -8,13 +8,13 @@ const getInput = async () => {
   const data = await res.text();
   const input = data.split("\n");
 
-  for (let range of input) {
-    getCodePart1(range);
-  }
-
   // for (let range of input) {
-  //   getCodePart2(range);
+  //   getCodePart1(range);
   // }
+
+  for (let range of input) {
+    getCodePart2(range);
+  }
 
   console.log("sum", sums);
 };
@@ -42,4 +42,38 @@ function getCodePart1(range) {
   }
 
   sums += tempmax;
+}
+
+function getCodePart2(digitsLeft) {
+  // use a stack to maintain the digits needed
+  // if DigitsLeft > DigitsNeeded: We can compare and take the bigger digits
+  // else: We have to take the remaining digits
+
+  // The length of the number i am going through
+  const digitsLeftLen = digitsLeft.length;
+  const toKeep = 12;
+  let toDrop = digitsLeftLen - toKeep;
+
+  // DigitsNeeded will be my Stack
+  let digitsNeeded = [];
+
+  let i = 0;
+  while (i < digitsLeftLen) {
+    // while I can 'drop' some numbers (basicallt choose what I wanna push)
+    // and I have at lesat one thing in my stack
+    // and my top of the stack val is less than the incoming value
+    while (
+      toDrop > 0 &&
+      digitsNeeded.length > 0 &&
+      digitsNeeded[digitsNeeded.length - 1] < digitsLeft[i]
+    ) {
+      digitsNeeded.pop(); // remove the top, it will be replaced by a better val
+      toDrop--; // since we 'dropped' a number now, we have one less opportunity to do so later
+    }
+
+    digitsNeeded.push(digitsLeft[i]);
+    i++;
+  }
+
+  sums += parseInt(digitsNeeded.slice(0, toKeep).join(""), 10);
 }

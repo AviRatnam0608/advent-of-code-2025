@@ -20,6 +20,7 @@ Part 2: Solved Dec 3rd 7:05 PM EST
 #### Day 3 ->
 
 Part 1: Solved Dec 4th 11:05 PM EST
+Part 2: Solved Dec 5th 12:11 AM EST
 
 #### Day 4 ->
 
